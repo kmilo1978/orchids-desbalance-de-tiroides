@@ -1,14 +1,18 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import VisualEditsMessenger from "../visual-edits/VisualEditsMessenger";
 import ErrorReporter from "@/components/ErrorReporter";
 import Script from "next/script";
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export const metadata: Metadata = {
     title: "Desbalance de Tiroides | Dr. Willmer Obregón Medellín",
     description: "Consulta especializada para el desbalance de tiroides con el Dr. Willmer Obregón en Medellín. Mejora tu salud metabólica y hormonal. Agenda tu cita hoy.",
     robots: "index, follow",
-    viewport: "width=device-width, initial-scale=1",
     icons: {
       icon: "/icon.png",
       apple: "/apple-icon.png",
